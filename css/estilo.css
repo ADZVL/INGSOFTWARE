@@ -1,0 +1,16 @@
+body{
+	padding-top: 100px;
+	color: blue;
+}
+@media screen and (min-width: 768px) and (max-width: 946px){
+body{
+	color: red;
+	padding-top: 150px;
+}
+}
+@media screen and (max-width: 767px){
+body{
+	color: orange;
+	padding-top: 50px;
+}
+}
