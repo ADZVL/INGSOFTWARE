@@ -49,6 +49,15 @@ CREATE TABLE promocion (
 	FOREIGN KEY(idBar) REFERENCES bares(id)
 );
 
+CREATE TABLE comentarios (
+	id INT NOT NULL AUTO_INCREMENT,
+	nombre VARCHAR(100),
+	apellido VARCHAR(100),
+	e_mail VARCHAR(100),
+	coments VARCHAR (500)
+	
+);
+
 INSERT INTO bares(nombre,ubicacion, telefono, horario) VALUES("Rodeo", "Calle1", 5534876,"L-D,9-18");
 INSERT INTO bares(nombre,ubicacion, telefono, horario) VALUES("Yadis", "Calle2", 55323477,"L-D,9-18");
 INSERT INTO bares(nombre,ubicacion, telefono, horario) VALUES("SalSiPuedes", "Calle3", 55456878,"L-D,9-18");
@@ -110,3 +119,5 @@ INSERT INTO clienteBar(idBar, idCliente) VALUES(2, 2);
 INSERT INTO clienteBar(idBar, idCliente) VALUES(3, 3);
 INSERT INTO clienteBar(idBar, idCliente) VALUES(4, 4);
 INSERT INTO clienteBar(idBar, idCliente) VALUES(5, 5);
+
+INSERT INTO comentarios(nombre, apellido, e_mail, coments) VALUES("juan", "perez", "djbabo@hotmail.com", "Excelente pagina, me encanta")
