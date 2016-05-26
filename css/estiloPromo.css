@@ -1,0 +1,76 @@
+body{
+	
+	background: E6F509
+}
+.contenedor{
+	width: 400px;
+	height: 40px;
+	color:#E6F509;
+	font-size: 40px;
+	line-height: 40px; 
+	overflow: hidden;
+	margin: auto;
+}
+#anima{
+	list-style: none;
+	padding-left: 20;
+	animation:  cambiar 10s infinite;
+
+}
+
+ @keyframes cambiar{
+
+ 	0%{margin-top: 0;}
+ 	20%{margin-top: 0;}
+ 	
+ 	25%{margin-top: -40px;}
+ 	50%{margin-top: -40px;}
+ 	
+ 	55%{margin-top: -80px;}
+ 	80%{margin-top: -80px;}
+
+ 	85%{margin-top: -40px;}
+ 	95%{margin-top: -40px;}
+
+ 	100%{margin-top: 0;}
+
+ }
+
+ .contenedorDos{
+	height: 250px;
+	width: 250px;;
+	-webkit-perspective: 700;
+	margin: auto;
+	padding-top: 5%;
+}
+.carta{
+	height: 100%;
+	width: 100%;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: 2s;
+
+}
+
+.carta:hover {
+	transform: rotateY(180deg);
+}
+
+.lado{
+	height: 100%;
+	width: 100%;
+	backface-visibility: hidden;
+	position: absolute;
+}
+.frente{
+	background: crimson;
+}
+.atras{
+	background: green;
+	transform: rotateY(180deg);
+}
+ 
+#imgAnima{
+ 	width: 100%;
+ 	height: 100%;
+ }

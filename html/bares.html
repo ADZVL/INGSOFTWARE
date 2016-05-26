@@ -5,6 +5,7 @@
 <title>CrudoX</title>
 <link href="../css/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
 <link href="../css/estilo.css" rel="stylesheet" type="text/css">
+<link href="../css/estiloBares.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
 <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../img/favicon.ico">
 <style type="text/css" >
@@ -54,12 +55,22 @@
       </div>
     </div>
   	<div class="col-md-8">
-    	<h1>Bares</h1>
+    	<div class="well" id="divBares">
+        <ul class="nav nav-tabs" id="menuBares">
+          <li role="presentation" class="active" onclick="cambiar(0)" id="li0"><a href="#">Rodeo</a></li>
+          <li role="presentation" onclick="cambiar(1)" id="li1"><a href="#" >Yadis</a></li>
+          <li role="presentation" onclick="cambiar(2)" id="li2"><a href="#">SalSiPuedes</a></li>
+          <li role="presentation" onclick="cambiar(3)" id="li3"><a href="#">Chabela</a></li>
+          <li role="presentation" onclick="cambiar(4)" id="li4"><a href="#">Chilanguitos</a></li>
+        </ul>
+        <div id="contenido"></div>
+      </div>
     </div>
 </div>
 
 <script src="../js/jquery/jquery-2.2.3.min.js" type="text/javascript"></script>
 <script src="../css/bootstrap/js/bootstrap.js" type="text/javascript"></script>
 <script src="../js/script.js" type="text/javascript"></script>
+<script src="../js/bares.js" type="text/javascript"></script>
 </body>
 </html>
