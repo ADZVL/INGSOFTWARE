@@ -54,8 +54,8 @@ CREATE TABLE comentarios (
 	nombre VARCHAR(100),
 	apellido VARCHAR(100),
 	e_mail VARCHAR(100),
-	coments VARCHAR (500)
-	
+	coments VARCHAR (500),
+	PRIMARY KEY(id)
 );
 
 INSERT INTO bares(nombre,ubicacion, telefono, horario) VALUES("Rodeo", "Calle1", 5534876,"L-D,9-18");
