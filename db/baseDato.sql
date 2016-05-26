@@ -120,4 +120,8 @@ INSERT INTO clienteBar(idBar, idCliente) VALUES(3, 3);
 INSERT INTO clienteBar(idBar, idCliente) VALUES(4, 4);
 INSERT INTO clienteBar(idBar, idCliente) VALUES(5, 5);
 
-INSERT INTO comentarios(nombre, apellido, e_mail, coments) VALUES("juan", "perez", "djbabo@hotmail.com", "Excelente pagina, me encanta")
+INSERT INTO comentarios(nombre, apellido, e_mail, coments) VALUES("juan", "perez", "djbabo@hotmail.com", "Excelente pagina, me encanta");
+INSERT INTO comentarios(nombre, apellido, e_mail, coments) VALUES("victor", "duran", "g_unit@hotmail.com", "buen servicio, gracias");
+INSERT INTO comentarios(nombre, apellido, e_mail, coments) VALUES("edgar", "alvarado", "thedypop@hotmail.com", "gracias encontre rapido lo que yo queria");
+INSERT INTO comentarios(nombre, apellido, e_mail, coments) VALUES("gabriela", "romero", "xhikafresita@hotmail.com", "deberian de hacer pagina en facebook, me sirvio de mucho grax");
+INSERT INTO comentarios(nombre, apellido, e_mail, coments) VALUES("margarita", "ramirez", "portozolacali@hotmail.com", "saludos, buena página");
