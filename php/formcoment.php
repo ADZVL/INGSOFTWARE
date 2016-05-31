@@ -27,9 +27,11 @@
 		//Ejecutar consulta
 		$resultado = mysql_query($insertar)or die("Consulta fallida" .mysql_error());
 		if(!$resultado) {
-			echo 'Error al postear comentario <br>';
+			echo '<script language="javascript">alert("Error al publicar :(");</script>';
+			header('Location: ../html/acercade.php');
 		} else {
-			echo 'Tu comentario se posteo correctamente <br>';
+			echo '<script language="javascript">alert("Comentario Agregado :D");</script>';
+			header('Location: ../html/acercade.php');
 		}
 		//Cerrar conexión
 		mysql_close($link);

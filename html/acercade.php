@@ -7,11 +7,6 @@
 <link href="../css/estilo.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
 <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../img/favicon.ico">
-<style type="text/css" >
-  div {
-    color: #ff0000;
-  }
-  </style>
 </head>
 <body background="../img/fondo.jpg" >
 
@@ -54,7 +49,7 @@
       </div>
     </div>
   	<div class="col-md-8">
-    	<h1>Acerca de...</h1>
+    	<h1 style="color: yellow">Acerca de...</h1>
       <br>
       <p style="text-align: justify;">
         <font color="yellow">Somos una organización encargada de consolidar los horarios, menús, servicios y promociones de todos los establecimientos de entretenimiento que se encuentren alrededor de la Facultad de Estudios Superiores
@@ -82,6 +77,38 @@ Aragon, con ello pretendemos que el usuario pueda encontrar de una manera eficaz
     <br>
     <input type="submit" value="Enviar" /><input type="reset" name="limpiar" value="Borrar datos del formulario" />
   </form>
+  <?php 
+    //Abrir conección
+    $usuario="root";
+    $contra="";
+    $host="127.0.0.1";
+    $link=mysql_connect($host,$usuario,$contra) or die("Error al conectar" .mysql_error());
+    //Seleccionar base de datos
+    mysql_select_db("test") or die("No se encontró la base de datos");
+  ?>
+  <?php 
+    //Consultas
+    $comentarios=mysql_query("SELECT nombre, apellido, e_mail, coments FROM comentarios;") or die("Consulta fallida" .mysql_error());
+  ?>
+  <?php 
+    //Imprimir resultados en una tabla
+    if ($row = mysql_fetch_array($comentarios)){
+        echo "<div class='well well-lg'><table border = '1' id='tablaComentarios'>";
+        echo "<tr><th>Nombre</th><th>Apellido</th><th>E-Mail</th><th>Comentario \t\t</th></tr>";
+      do {
+        echo "<tr><td>".$row["nombre"]."</td><td>".$row["apellido"]."</td><td>".$row["e_mail"]."</td><td>".$row["coments"]."</td></tr>";
+      } while ($row = mysql_fetch_array($comentarios));
+        echo "</table> </div>";
+    }
+  ?>
+  <?php 
+    //liberar resultados
+    mysql_free_result($comentarios);
+  ?>
+  <?php 
+    //Cerrar conección
+    mysql_close($link);
+  ?>
 </div>
 
 <script src="../js/jquery/jquery-2.2.3.min.js" type="text/javascript"></script>
