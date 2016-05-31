@@ -51,6 +51,23 @@
     </div>
   	<div class="col-md-8">
 
+    <?php 
+      //Abrir conección
+      $usuario="root";
+      $contra="";
+      $host="127.0.0.1";
+      $link=mysql_connect($host,$usuario,$contra) or die("Error al conectar" .mysql_error());
+      //Seleccionar base de datos
+      mysql_select_db("test") or die("No se encontró la base de datos");
+    ?>
+    <?php 
+      //Consultas
+      $c1=mysql_query("SELECT nombre, descripcion FROM promocion WHERE id=1;") or die("Consulta fallida" .mysql_error());
+      $c2=mysql_query("SELECT nombre, descripcion FROM promocion WHERE id=2;") or die("Consulta fallida" .mysql_error());
+      $c3=mysql_query("SELECT nombre, descripcion FROM promocion WHERE id=3;") or die("Consulta fallida" .mysql_error());
+      $c4=mysql_query("SELECT nombre, descripcion FROM promocion WHERE id=4;") or die("Consulta fallida" .mysql_error());
+      $c5=mysql_query("SELECT nombre, descripcion FROM promocion WHERE id=5;") or die("Consulta fallida" .mysql_error());
+    ?>
       
     <div class="row">
       <div class="col-md-12">
@@ -71,6 +88,11 @@
           </div>
           <div class="lado atras">
             <h1>PromoYadis</h1>
+            <?php
+              $con1=mysql_fetch_row($c2);
+              echo("<h5>$con1[0]</h5>");
+              echo("<p>$con1[1]</p>");
+            ?>
           </div>
         </div>
         <div class="carta">
@@ -79,6 +101,11 @@
           </div>
           <div class="lado atras">
             <h1>PromoSalSiPuedes</h1>
+            <?php
+              $con1=mysql_fetch_row($c3);
+              echo("<h5>$con1[0]</h5>");
+              echo("<p>$con1[1]</p>");
+            ?>
           </div>
         </div>
         <div class="carta">
@@ -87,6 +114,11 @@
           </div>
           <div class="lado atras">
             <h1>PromoChabela</h1>
+            <?php
+              $con1=mysql_fetch_row($c4);
+              echo("<h5>$con1[0]</h5>");
+              echo("<p>$con1[1]</p>");
+            ?>
           </div>
         </div>
         <div class="carta">
@@ -95,6 +127,11 @@
           </div>
           <div class="lado atras">
             <h1>PromoRodeo</h1>
+            <?php
+              $con1=mysql_fetch_row($c1);
+              echo("<h5>$con1[0]</h5>");
+              echo("<p>$con1[1]</p>");
+            ?>
           </div>
         </div>
         <div class="carta">
@@ -103,14 +140,29 @@
           </div>
           <div class="lado atras">
             <h1>PromoChilanguitos</h1>
+            <?php
+              $con1=mysql_fetch_row($c5);
+              echo("<h5>$con1[0]</h5>");
+              echo("<p>$con1[1]</p>");
+            ?>
           </div>
         </div>
       </div>
     </div>
       </div>
     </div>
-
-      <!--Sigue escribiendo AQUI-->
+    <?php 
+      //liberar resultados
+      mysql_free_result($c1);
+      mysql_free_result($c2);
+      mysql_free_result($c3);
+      mysql_free_result($c4);
+      mysql_free_result($c5);
+    ?>
+    <?php 
+      //Cerrar conección
+      mysql_close($link);
+    ?>
   </div>
 </div>
      

@@ -42,7 +42,7 @@
       	<div class="list-group">
   			<a href="../index.html" class="list-group-item">Inicio</a>
   			<a href="#" class="list-group-item active">Bares</a>
-  			<a href="promo.html" class="list-group-item">Promociones</a>
+  			<a href="promo.php" class="list-group-item">Promociones</a>
   			<a href="acercade.php" class="list-group-item">Acerca de...</a>
   			<a href="quienes.html" class="list-group-item">¿Quienes somos?</a>
 		</div>
