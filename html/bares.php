@@ -8,14 +8,8 @@
 <link href="../css/estiloBares.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
 <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../img/favicon.ico">
-<style type="text/css" >
-  div {
-    color: #ff0000;
-  }
-  </style>
 </head>
 <body background="../img/fondo.jpg">
-
 <nav class="navbar navbar-inverse navbar-fixed-top">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
@@ -47,7 +41,7 @@
    	  <div class="well well-lg">
       	<div class="list-group">
   			<a href="../index.html" class="list-group-item">Inicio</a>
-  			<a href="bares.html" class="list-group-item active">Bares</a>
+  			<a href="#" class="list-group-item active">Bares</a>
   			<a href="promo.html" class="list-group-item">Promociones</a>
   			<a href="acercade.html" class="list-group-item">Acerca de...</a>
   			<a href="quienes.html" class="list-group-item">¿Quienes somos?</a>

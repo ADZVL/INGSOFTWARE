@@ -5,7 +5,7 @@ body{
 .contenedor{
 	width: 400px;
 	height: 40px;
-	color:#E6F509;
+	color: #E6F509;
 	font-size: 40px;
 	line-height: 40px; 
 	overflow: hidden;
@@ -38,7 +38,8 @@ body{
 
  .contenedorDos{
 	height: 250px;
-	width: 250px;;
+	width: 250px;
+	color: #E6F509;
 	-webkit-perspective: 700;
 	margin: auto;
 	padding-top: 5%;
